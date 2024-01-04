@@ -1,0 +1,155 @@
+/* Contenedor principal */
+#musicPlayerContainer {
+    position: relative;
+    z-index: 1;
+    /* Asegura que el contenedor principal esté por debajo de las sugerencias */
+  }
+  
+  /* Barra de búsqueda */
+  #searchInput {
+    width: 100%;
+    box-sizing: border-box;
+    /* Asegura que el ancho incluya el padding y el borde */
+  }
+  
+  /* Contenedor de sugerencias */
+  #suggestionsContainer {
+    position: absolute;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+    left: 0;
+    text-align: left;
+    z-index: 2;
+    /* Coloca las sugerencias por encima del contenedor principal */
+  }
+  
+  .suggestion {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .suggestion:hover {
+    background-color: #f0f0f0;
+  }
+  
+  
+  /* Botones */
+  .btn {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    /* Añade una transición de color al botón */
+  }
+  
+  .btn-primary {
+    background-color: #ffffff;
+    color: #ffffff;
+    border: none;
+  }
+  
+  #playPauseButton,
+  #nextButton,
+  #prevButton {
+    background-color: #ffffff;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.3s ease;
+    /* Añade una transición de color al botón */
+  }
+  
+  #playPauseButton:hover,
+  #nextButton:hover,
+  #prevButton:hover {
+    background-color: #d9d9d9;
+    /* Cambia el color al pasar el ratón */
+  }
+  
+  #playPauseButton:active,
+  #nextButton:active,
+  #prevButton:active {
+    background-color: #b3b3b3;
+    /* Cambia el color al hacer clic */
+  }
+  
+  /* Estilo para el botón de reproducción/pausa */
+  
+  #playPauseButton img,
+  #nextButton img,
+  #prevButton img {
+    width: 50px;
+    height: auto;
+  }
+  
+  
+  .audio-progress input[type="range"] {
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s ease;
+    /* Añade una transición de color al rango */
+  }
+  
+  /*Estilo del borde de la imagen*/
+  
+  /* Agrega este estilo en tu archivo de estilos CSS */
+  .shadowed-img {
+    position: relative;
+  }
+  
+  .shadowed-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    box-shadow: -1px 0px 20px 4px rgba(139, 129, 129, 0.603);
+    border-radius: 8px;
+    /* Ajusta según tus preferencias */
+    background-color: rgba(255, 255, 255, 0);
+    /* Fondo transparente */
+  }
+  
+  .shadowed-img img {
+    border-radius: 8px;
+    /* Ajusta según tus preferencias */
+  }
+  
+  /* Ajusta estos estilos según tus necesidades */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .rounded-4 {
+    border-radius: 0.4rem;
+  }
+  
+  /* Evitar la selección de texto */
+  body {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  
+  
+  /* O si solo quieres aplicar a ciertos elementos */
+  .no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  

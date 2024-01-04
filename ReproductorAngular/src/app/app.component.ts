@@ -1,14 +1,20 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+// src/app/app.component.ts
+
+import { Component, OnInit } from '@angular/core';
+import { MusicPlayerService } from './music-player.service';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: `
+    <!-- Tu contenido de componente aquí -->
+  `
 })
-export class AppComponent {
-  title = 'ReproductorAngular';
+export class AppComponent implements OnInit {
+
+  constructor(private musicPlayerService: MusicPlayerService) { }
+
+  ngOnInit() {
+    this.musicPlayerService.init();
+  }
+
 }
